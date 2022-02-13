@@ -12,25 +12,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Home PAge</h1>
     <nav>
         <a href="{% url 'home'%}"> Home</a>
         <a href="{% url 'CreateView' %}"> <button>add a blog</button></a>
     </nav>
+    <h1> Create PAge</h1>
 
+    <form action="" method="post">
+        {% csrf_token %}
 
-    <div>
+   <input type="text" name="name" id="" placeholder="name"> 
+        <br>
 
-        {% for i in data_key %}
+        <input type="email" name="email" id="" placeholder="email">
+        <br> <br>
 
-        <div class="sec1">
-            <h1> {{i.name}}</h1>
-            <h5>{{i.id}}</h5>
-            <a href="{% url 'details' i.id %}"> <h2> i.email</h2></a>
-        </div>
+        <textarea name="description" id="" cols="30" rows="10"></textarea>
 
+        <button type="submit"> submit </button>
+    </form>
 
-        {% endfor %}
-    </div>
 </body>
 </html>
