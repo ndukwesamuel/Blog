@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .sec1{
+            border: 2px solid red;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Home PAge</h1>
+
+
+    <div>
+
+        {% for i in data_key %}
+
+        <div class="sec1">
+            <h1> {{i.name}}</h1>
+            <h5>{{i.id}}</h5>
+            <a href="{% url 'details' i.id %}"> <h2> i.email</h2></a>
+        </div>
+
+
+        {% endfor %}
+    </div>
+</body>
+</html>

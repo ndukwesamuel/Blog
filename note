@@ -1,0 +1,1 @@
+create an App ==> python manage.py startapp App_name
